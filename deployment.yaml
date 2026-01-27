@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notes-app-deployment #change deployment name accordingly from image name
+  labels:
+    app: noteapp #change 
+  namespace: notes-app  #add namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notes-app #change 
+  template:
+    metadata:
+      labels:
+        app: notes-app #change
+    spec:
+      containers:
+      - name: notes-app  #change
+        image: adityabhosale212223/notes-app:latest  #change from dockerhub image name
+        ports:
+        - containerPort: 8000
+
+        #Notes 
+        #namespcce should be same everywhere 
+        #app label should be same everywhere
+        
