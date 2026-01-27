@@ -1,6 +1,6 @@
 Django-notes-app Project
 Clone the repository (example):
-1.	git clone https://github.com/LondheShubham153/django-notes-app.git
+1.	git clone <url>
 2.	docker build -t notes-app . (build the Docker image)
 3.	Generate a personal access token on Docker Hub and log in using the command line.
 4.	docker tag notes-app:latest adityabhosale212223/notes-app:latest
